@@ -42,19 +42,26 @@ namespace autoclicker
 
         private void timerClick_Tick(object sender, EventArgs e)
         {
-            // click
-            //move to position 
-            moveMouse(451,88);
-            click();
-            Thread.Sleep(2);
-            //move to position 2
-            moveMouse(756, 78);
-            click();
+            List<Point> points = new List<Point>
+            {
+                new Point(450, 88),
+                new Point(756, 78),
+                new Point(450, 160),
+                new Point(750, 150),
+                new Point(443, 226),
+                new Point(755, 214)
+            };
+            foreach(var point in points)
+            {
+                moveMouse(point.X,point.Y);
+                click();
+                Thread.Sleep(2);
+            }
         }
 
         private void moveMouse(int x, int y)
         {
-            Cursor.Position = new Point(x,y);
+            Cursor.Position = new Point(x, y);
         }
 
         bool started = false;
