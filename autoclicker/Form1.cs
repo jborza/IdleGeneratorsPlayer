@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -22,12 +23,38 @@ namespace autoclicker
             //hk.KeyCode = Keys.A;
             hk.Pressed += Hk_Pressed;
             hk.Register(this);
+            Hotkey hkCapture = new Hotkey();
+            hkCapture.KeyCode = Keys.D1;
+            hkCapture.Pressed += HkCapture_Pressed;
+            hkCapture.Register(this);
+
+        }
+
+        private void HkCapture_Pressed(object sender, HandledEventArgs e)
+
+        {
+            string s = "";
+            s += Cursor.Position.X + ",";
+            s += Cursor.Position.Y;
+            s += Environment.NewLine;
+            textBoxDump.Text += s;
         }
 
         private void timerClick_Tick(object sender, EventArgs e)
         {
             // click
+            //move to position 
+            moveMouse(451,88);
             click();
+            Thread.Sleep(2);
+            //move to position 2
+            moveMouse(756, 78);
+            click();
+        }
+
+        private void moveMouse(int x, int y)
+        {
+            Cursor.Position = new Point(x,y);
         }
 
         bool started = false;
@@ -84,7 +111,7 @@ namespace autoclicker
 
         private void start()
         {
-            started=true;
+            started = true;
             timerClick.Interval = int.Parse(textTime.Text);
             timerClick.Start();
 
@@ -94,7 +121,7 @@ namespace autoclicker
         {
             stop();
         }
-        
+
         private void stop()
         {
             started = false;
@@ -103,7 +130,7 @@ namespace autoclicker
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Hk_Pressed(object sender, HandledEventArgs e)
@@ -119,8 +146,8 @@ namespace autoclicker
         }
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
-        { 
-            MessageBox.Show(e.KeyCode+"");
+        {
+            MessageBox.Show(e.KeyCode + "");
         }
     }
 }
