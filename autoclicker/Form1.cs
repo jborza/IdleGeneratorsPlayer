@@ -2,13 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace autoclicker
@@ -45,7 +41,7 @@ namespace autoclicker
             List<Point> points = new List<Point>
             {
                 new Point(450, 88),
-                new Point(756, 78),
+                new Point(750, 78),
                 new Point(450, 160), //2nd
                 new Point(750, 150),
                 new Point(450, 226), //3rd
@@ -53,14 +49,18 @@ namespace autoclicker
                 new Point(450,289), //4th
                 new Point(750,281),
                 new Point(450,356), //5th
-                new Point(750,347)
+                new Point(750,347),
+                new Point(450,425), //6th
+                new Point(750,412),
+                new Point(450,490), //7th
+                new Point(750,482)
 
             };
             foreach (var point in points)
             {
                 moveMouse(point.X, point.Y);
                 click();
-                Thread.Sleep(2);
+                Thread.Sleep(1);
             }
         }
 
