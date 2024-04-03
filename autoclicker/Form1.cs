@@ -46,14 +46,19 @@ namespace autoclicker
             {
                 new Point(450, 88),
                 new Point(756, 78),
-                new Point(450, 160),
+                new Point(450, 160), //2nd
                 new Point(750, 150),
-                new Point(443, 226),
-                new Point(755, 214)
+                new Point(450, 226), //3rd
+                new Point(755, 214),
+                new Point(450,289), //4th
+                new Point(750,281),
+                new Point(450,356), //5th
+                new Point(750,347)
+
             };
-            foreach(var point in points)
+            foreach (var point in points)
             {
-                moveMouse(point.X,point.Y);
+                moveMouse(point.X, point.Y);
                 click();
                 Thread.Sleep(2);
             }
