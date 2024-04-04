@@ -38,26 +38,32 @@ namespace autoclicker
 
         private void timerClick_Tick(object sender, EventArgs e)
         {
+            const int buyX = 450;
+            const int getX = 750;
             List<Point> points = new List<Point>
             {
-                new Point(450, 88),
-                new Point(750, 78),
-                new Point(450, 160), //2nd
-                new Point(750, 150),
-                new Point(450, 226), //3rd
-                new Point(755, 214),
-                new Point(450,289), //4th
-                new Point(750,281),
-                new Point(450,356), //5th
-                new Point(750,347),
-                new Point(450,425), //6th
-                new Point(750,412),
-                new Point(450,490), //7th
-                new Point(750,482)
-
+                new Point(buyX, 88),
+                new Point(getX, 78),
+                new Point(buyX, 160), //2nd
+                new Point(getX, 150),
+                new Point(buyX, 226), //3rd
+                new Point(getX, 214),
+                new Point(buyX,289), //4th
+                new Point(getX,281),
+                new Point(buyX,356), //5th
+                new Point(getX,347),
+                new Point(buyX,425), //6th
+                new Point(getX,412),
+                new Point(buyX,490), //7th
+                new Point(getX,482),
+                new Point(buyX, 555), //8th
+                new Point(getX, 547)
             };
+            bool alsoBuyPlaces = checkBoxAlsoBuy.Checked;
             foreach (var point in points)
             {
+                if(!alsoBuyPlaces && point.X == 450)
+                    continue;
                 moveMouse(point.X, point.Y);
                 click();
                 Thread.Sleep(1);

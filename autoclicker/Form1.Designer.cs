@@ -39,6 +39,7 @@ namespace autoclicker
             this.button3 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBoxDump = new System.Windows.Forms.TextBox();
+            this.checkBoxAlsoBuy = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // buttonStart
@@ -125,11 +126,22 @@ namespace autoclicker
             this.textBoxDump.Size = new System.Drawing.Size(538, 214);
             this.textBoxDump.TabIndex = 7;
             // 
+            // checkBoxAlsoBuy
+            // 
+            this.checkBoxAlsoBuy.AutoSize = true;
+            this.checkBoxAlsoBuy.Location = new System.Drawing.Point(18, 171);
+            this.checkBoxAlsoBuy.Name = "checkBoxAlsoBuy";
+            this.checkBoxAlsoBuy.Size = new System.Drawing.Size(145, 24);
+            this.checkBoxAlsoBuy.TabIndex = 8;
+            this.checkBoxAlsoBuy.Text = "Also buy places";
+            this.checkBoxAlsoBuy.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(568, 496);
+            this.Controls.Add(this.checkBoxAlsoBuy);
             this.Controls.Add(this.textBoxDump);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
@@ -157,6 +169,7 @@ namespace autoclicker
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBoxDump;
+        private System.Windows.Forms.CheckBox checkBoxAlsoBuy;
     }
 }
 
