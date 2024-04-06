@@ -152,7 +152,7 @@ namespace autoclicker
             this.Controls.Add(this.buttonStart);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
-            this.Text = "Idle Multipliers Player";
+            this.Text = "Idle Generators Player";
             this.ResumeLayout(false);
             this.PerformLayout();
 
