@@ -57,12 +57,16 @@ namespace autoclicker
                 new Point(buyX,490), //7th
                 new Point(getX,482),
                 new Point(buyX, 555), //8th
-                new Point(getX, 547)
+                new Point(getX, 547),
+                new Point(buyX, 624), //9th
+                new Point(getX, 614),
+                new Point(buyX, 687), //10th
+                new Point(getX, 682)
             };
             bool alsoBuyPlaces = checkBoxAlsoBuy.Checked;
             foreach (var point in points)
             {
-                if(!alsoBuyPlaces && point.X == 450)
+                if (!alsoBuyPlaces && point.X == 450)
                     continue;
                 moveMouse(point.X, point.Y);
                 click();
