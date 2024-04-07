@@ -78,7 +78,7 @@ namespace autoclicker
             };
             foreach (var point in points)
             {
-                if (type == Types.Power && point.X != powerX)
+                if (type == Types.Power && point.X != powerX && checkBoxPower.Checked)
                     continue;
                 if (type == Types.Amount && point.X != powerX && checkBoxAmount.Checked)
                     continue;
