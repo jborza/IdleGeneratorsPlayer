@@ -39,7 +39,12 @@ namespace autoclicker
             this.button3 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBoxDump = new System.Windows.Forms.TextBox();
-            this.checkBoxAlsoBuy = new System.Windows.Forms.CheckBox();
+            this.checkBoxPower = new System.Windows.Forms.CheckBox();
+            this.checkBoxAmount = new System.Windows.Forms.CheckBox();
+            this.checkBoxSpeed = new System.Windows.Forms.CheckBox();
+            this.checkBoxCritical = new System.Windows.Forms.CheckBox();
+            this.checkBoxMultiplier = new System.Windows.Forms.CheckBox();
+            this.checkBoxBonus = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // buttonStart
@@ -76,7 +81,7 @@ namespace autoclicker
             this.textTime.Name = "textTime";
             this.textTime.Size = new System.Drawing.Size(148, 26);
             this.textTime.TabIndex = 2;
-            this.textTime.Text = "100";
+            this.textTime.Text = "1000";
             // 
             // label1
             // 
@@ -126,22 +131,81 @@ namespace autoclicker
             this.textBoxDump.Size = new System.Drawing.Size(538, 214);
             this.textBoxDump.TabIndex = 7;
             // 
-            // checkBoxAlsoBuy
+            // checkBoxPower
             // 
-            this.checkBoxAlsoBuy.AutoSize = true;
-            this.checkBoxAlsoBuy.Location = new System.Drawing.Point(18, 171);
-            this.checkBoxAlsoBuy.Name = "checkBoxAlsoBuy";
-            this.checkBoxAlsoBuy.Size = new System.Drawing.Size(145, 24);
-            this.checkBoxAlsoBuy.TabIndex = 8;
-            this.checkBoxAlsoBuy.Text = "Also buy places";
-            this.checkBoxAlsoBuy.UseVisualStyleBackColor = true;
+            this.checkBoxPower.AutoSize = true;
+            this.checkBoxPower.Checked = true;
+            this.checkBoxPower.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxPower.Location = new System.Drawing.Point(18, 171);
+            this.checkBoxPower.Name = "checkBoxPower";
+            this.checkBoxPower.Size = new System.Drawing.Size(79, 24);
+            this.checkBoxPower.TabIndex = 8;
+            this.checkBoxPower.Text = "Power";
+            this.checkBoxPower.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxAmount
+            // 
+            this.checkBoxAmount.AutoSize = true;
+            this.checkBoxAmount.Checked = true;
+            this.checkBoxAmount.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxAmount.Location = new System.Drawing.Point(103, 171);
+            this.checkBoxAmount.Name = "checkBoxAmount";
+            this.checkBoxAmount.Size = new System.Drawing.Size(91, 24);
+            this.checkBoxAmount.TabIndex = 9;
+            this.checkBoxAmount.Text = "Amount";
+            this.checkBoxAmount.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxSpeed
+            // 
+            this.checkBoxSpeed.AutoSize = true;
+            this.checkBoxSpeed.Location = new System.Drawing.Point(200, 171);
+            this.checkBoxSpeed.Name = "checkBoxSpeed";
+            this.checkBoxSpeed.Size = new System.Drawing.Size(82, 24);
+            this.checkBoxSpeed.TabIndex = 10;
+            this.checkBoxSpeed.Text = "Speed";
+            this.checkBoxSpeed.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxCritical
+            // 
+            this.checkBoxCritical.AutoSize = true;
+            this.checkBoxCritical.Location = new System.Drawing.Point(288, 171);
+            this.checkBoxCritical.Name = "checkBoxCritical";
+            this.checkBoxCritical.Size = new System.Drawing.Size(82, 24);
+            this.checkBoxCritical.TabIndex = 11;
+            this.checkBoxCritical.Text = "Critical";
+            this.checkBoxCritical.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxMultiplier
+            // 
+            this.checkBoxMultiplier.AutoSize = true;
+            this.checkBoxMultiplier.Location = new System.Drawing.Point(376, 171);
+            this.checkBoxMultiplier.Name = "checkBoxMultiplier";
+            this.checkBoxMultiplier.Size = new System.Drawing.Size(97, 24);
+            this.checkBoxMultiplier.TabIndex = 12;
+            this.checkBoxMultiplier.Text = "Multiplier";
+            this.checkBoxMultiplier.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxBonus
+            // 
+            this.checkBoxBonus.AutoSize = true;
+            this.checkBoxBonus.Location = new System.Drawing.Point(480, 171);
+            this.checkBoxBonus.Name = "checkBoxBonus";
+            this.checkBoxBonus.Size = new System.Drawing.Size(81, 24);
+            this.checkBoxBonus.TabIndex = 13;
+            this.checkBoxBonus.Text = "Bonus";
+            this.checkBoxBonus.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(568, 496);
-            this.Controls.Add(this.checkBoxAlsoBuy);
+            this.Controls.Add(this.checkBoxBonus);
+            this.Controls.Add(this.checkBoxMultiplier);
+            this.Controls.Add(this.checkBoxCritical);
+            this.Controls.Add(this.checkBoxSpeed);
+            this.Controls.Add(this.checkBoxAmount);
+            this.Controls.Add(this.checkBoxPower);
             this.Controls.Add(this.textBoxDump);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
@@ -169,7 +233,12 @@ namespace autoclicker
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBoxDump;
-        private System.Windows.Forms.CheckBox checkBoxAlsoBuy;
+        private System.Windows.Forms.CheckBox checkBoxPower;
+        private System.Windows.Forms.CheckBox checkBoxAmount;
+        private System.Windows.Forms.CheckBox checkBoxSpeed;
+        private System.Windows.Forms.CheckBox checkBoxCritical;
+        private System.Windows.Forms.CheckBox checkBoxMultiplier;
+        private System.Windows.Forms.CheckBox checkBoxBonus;
     }
 }
 

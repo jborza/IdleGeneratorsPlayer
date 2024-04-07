@@ -36,8 +36,19 @@ namespace autoclicker
             textBoxDump.Text += s;
         }
 
+        enum Types { Power, Amount, Speed, Critical, Multiplier, Bonus }
+        Types type = Types.Multiplier;
+
         private void timerClick_Tick(object sender, EventArgs e)
         {
+            if (type == Types.Bonus)
+            {
+                type = Types.Power;
+            }
+            else
+            {
+                type++;
+            }
             const int buyX = 450;
             const int powerX = 320;
             const int amountX = 420;
@@ -67,6 +78,18 @@ namespace autoclicker
             };
             foreach (var point in points)
             {
+                if (type == Types.Power && point.X != powerX)
+                    continue;
+                if (type == Types.Amount && point.X != powerX && checkBoxAmount.Checked)
+                    continue;
+                if (type == Types.Speed && point.X != speedX && checkBoxSpeed.Checked)
+                    continue;
+                if (type == Types.Critical && point.X != criticalX && checkBoxCritical.Checked)
+                    continue;
+                if (type == Types.Multiplier && point.X != multiplierX && checkBoxMultiplier.Checked)
+                    continue;
+                if (type == Types.Bonus && point.X != bonusX && checkBoxBonus.Checked)
+                    continue;
                 moveMouse(point.X, point.Y);
                 click();
                 Thread.Sleep(1);
@@ -79,7 +102,6 @@ namespace autoclicker
         }
 
         bool started = false;
-
 
         //mouse event constants
         const int MOUSEEVENTF_LEFTDOWN = 2;
@@ -135,7 +157,6 @@ namespace autoclicker
             started = true;
             timerClick.Interval = int.Parse(textTime.Text);
             timerClick.Start();
-
         }
 
         private void buttonStop_Click(object sender, EventArgs e)
